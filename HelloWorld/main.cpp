@@ -1,18 +1,10 @@
-#include <QApplication>
-#include <QDialog>
-#include <QLabel>
- 
+#include "ui_hellodialog.h"
+#include "hellodialog.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     
-    QDialog w;
-    w.resize(400,300);
-
-    QLabel label(&w);
-    label.move(120,120);
-
-    label.setText("Hello World! 你好 QT!");
+    HelloDialog w;
     w.show();
     // 让 QApplication 对象进入事件循环
     return a.exec();
